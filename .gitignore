@@ -1,2 +1,5 @@
+.gitignore
 .env
-.idea/
+.idea
+.ipynb_checkpoints
+#for mac add .DS_STORE
