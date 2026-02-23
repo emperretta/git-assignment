@@ -13,7 +13,7 @@ STUDENT CHANGE LOG & AI DISCLOSURE:
 ----------------------------------
 1. Did you use an LLM (ChatGPT/Claude/etc.)? Yes
 2. If yes, what was your primary prompt? 
-Used Claude Opus 4.6 as a learning aid to understand each method's purpose and implementation step by step.
+Used Claude Opus 4.6 to help me understand and build each method of the Stock class step by step.
 ----------------------------------
 """
 
