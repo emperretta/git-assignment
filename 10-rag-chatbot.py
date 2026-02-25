@@ -2,13 +2,13 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 from llama_index.core import Settings, SimpleDirectoryReader, VectorStoreIndex
-from llama_index.embeddings.google_genai import GoogleGenAIEmbedding
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.llms.google_genai import GoogleGenAI
 
 load_dotenv()
 
 Settings.llm = GoogleGenAI(model="gemini-2.5-flash")
-Settings.embed_model = GoogleGenAIEmbedding(model_name="models/gemini-embedding-004")
+Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
 
 @st.cache_resource
 def build_query_engine():
@@ -29,3 +29,6 @@ def main():
             response = query_engine.query(user_input)
         st.write("**Answer:**")
         st.write(str(response))
+
+if __name__ == "__main__":
+    main()
